@@ -82,7 +82,7 @@ export const App = () => {
 
             <label>Price in Rupees</label>
             <input
-              type="text"
+              type="number"
               className="form-control"
               placeholder="₹ "
               required
