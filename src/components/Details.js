@@ -7,7 +7,14 @@ const Details = () => {
   console.log(location);
   return (
     <div>
-      <div style={{ paddingBottom: "20px" }}>
+      <div
+        class="card"
+        style={{
+          paddingBottom: "20px",
+          width: "fit-content",
+          backgroundColor: "teal",
+        }}
+      >
         <div class="card-body" style={{ border: "10px" }}>
           <h5
             class="card-title"
