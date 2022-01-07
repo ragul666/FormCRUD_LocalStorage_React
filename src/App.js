@@ -1,13 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { View } from "./components/View";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
-  Redirect,
-} from "react-router-dom";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Details from "./components/Details";
 // getting the values of local storage

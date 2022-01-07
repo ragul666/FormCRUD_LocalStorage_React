@@ -17,6 +17,7 @@ const Home = () => {
   //notify
   toast.configure();
   const notify = () => toast("Product Added");
+  
 
   // input field states
   const [title, setTitle] = useState("");
@@ -119,6 +120,7 @@ const Home = () => {
               </div>
               <button
                 className="btn btn-danger btn-md"
+                
                 onClick={() => setbooks([])}
               >
                 Remove All Products

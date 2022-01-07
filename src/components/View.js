@@ -1,16 +1,15 @@
 import React from "react";
 import { Icon } from "react-icons-kit";
 import { trash } from "react-icons-kit/feather/trash";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import { Link } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const View = ({ books, deleteBook }) => {
+  toast.configure();
+  const notify1 = () => toast("Product Deleted");
+
   let navigate = useNavigate();
   return books.map((book) => (
     <div style={{ paddingBottom: "20px" }}>
@@ -51,7 +50,7 @@ export const View = ({ books, deleteBook }) => {
         <br />
         <p class="card-text" style={{ margin: "auto", padding: "20px" }}>
           <div className="delete-btn" onClick={() => deleteBook(book.isbn)}>
-            <button>
+            <button onClick={notify1}>
               <Icon icon={trash} />
             </button>
           </div>
