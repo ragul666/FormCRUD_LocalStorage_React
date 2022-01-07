@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const View = ({ books, deleteBook }) => {
   toast.configure();
-  const notify1 = () => toast("Product Deleted");
+  const notify1 = () => toast.success("Product Deleted");
 
   let navigate = useNavigate();
   return books.map((book) => (
