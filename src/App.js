@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { View } from "./components/View";
-
 import {
   BrowserRouter as Router,
   Switch,

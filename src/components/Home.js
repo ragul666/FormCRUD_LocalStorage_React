@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View } from "./View";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const getDatafromLS = () => {
   const data = localStorage.getItem("books");
@@ -12,6 +14,9 @@ const getDatafromLS = () => {
 
 const Home = () => {
   const [books, setbooks] = useState(getDatafromLS());
+  //notify
+  toast.configure();
+  const notify = () => toast("Product Added");
 
   // input field states
   const [title, setTitle] = useState("");
@@ -96,7 +101,11 @@ const Home = () => {
               value={rating}
             ></input>
             <br />
-            <button type="submit" className="btn btn-success btn-md">
+            <button
+              type="submit"
+              onClick={notify}
+              className="btn btn-success btn-md"
+            >
               ADD
             </button>
           </form>
